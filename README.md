@@ -26,12 +26,12 @@
   - [Key Metrics](#5-key-metrics)  
 - [Output Format](#output-format)
 
----
+
 ## Introduction
 
    The Tic Tac Toe game is an Android application developed in Kotlin that offers a fun and engaging experience for players. The game features two distinct visual styles: a Basic minimalist theme and a Retro animated theme with glowing neon effects. The core game logic is shared efficiently across these themes through the use of inheritance and polymorphism, ensuring clean, maintainable code.
 
-### Key Features
+### Key Features:
 
    - **Dual UI Themes**: Basic (minimalist) and Retro (animated) versions
    - **Smart AI Opponent**: Three-level decision making (win/block/random)
@@ -39,10 +39,10 @@
    - **Responsive Design**: Adapts to different screen sizes
    - **Efficient Resource Management**: Optimized animations and audio
 
----
+
 ## Setup
 
-### Repository Content
+### Repository Content:
 
    ```
    TicTacToe/
@@ -71,7 +71,7 @@
    └── settings.gradle
    ```
 
-### How to Run the Code
+### How to Run the Code:
 
 1. **Requirements**:
    - Android Studio (latest version)
@@ -94,36 +94,38 @@
 
 **NOTE:** Since this is an indie game (App) that is not published on the App Store, a security message will pop up when installing stating app is not trusted or secured, well... it is secured :] 
 
-### Used Libraries
+### Used Libraries:
 
 - **Android SDK**: Core framework components
 - **Glide**: For efficient GIF animation loading
 - **AndroidX**: For modern UI components
 - **Kotlin**: Primary programming language
 
----
+
 ## **Code Structure**
 The application follows a **modular architecture** with clear separation between:
-1. **Base Game Logic** (Shared functionality)
-2. **Theme-Specific Implementations** (UI variations)
-3. **Media Management** (Audio handling)
-4. **Animations & Effects** (Retro-specific features)
+  1. **Base Game Logic** (Shared functionality)
+  2. **Theme-Specific Implementations** (UI variations)
+  3. **Media Management** (Audio handling)
+  4. **Animations & Effects** (Retro-specific features)
 
 
 ### **1. Base Activity: Core Game Logic**
 **File:** `BaseTicTacToeActivity.kt`  
 **Purpose:** Centralizes all shared game mechanics to avoid duplication.
 
+---
 #### **Key Components:**
-| Component | Type | Description |
-|-----------|------|-------------|
-| `player` | Variable | Tracks current turn (`"p1"` or `"cpu"`) |
-| `onButtonClick()` | Method | Handles player moves and triggers AI turn |
-| `cpuTurn()` | Method | AI decision-making with 3-tier logic (win/block/random) |
-| `findWinningMove()` | Method | Scans board for immediate winning moves (AI) |
-| `findBlockingMove()` | Method | Prevents player from winning (Defensive AI) |
-| `win()` | Method | Checks win/draw conditions and updates UI |
+  | Component | Type | Description |
+  |-----------|------|-------------|
+  | `player` | Variable | Tracks current turn (`"p1"` or `"cpu"`) |
+  | `onButtonClick()` | Method | Handles player moves and triggers AI turn |
+  | `cpuTurn()` | Method | AI decision-making with 3-tier logic (win/block/random) |
+  | `findWinningMove()` | Method | Scans board for immediate winning moves (AI) |
+  | `findBlockingMove()` | Method | Prevents player from winning (Defensive AI) |
+  | `win()` | Method | Checks win/draw conditions and updates UI |
 
+---
 #### **Abstract Methods (UI Customization):**
 ```kotlin
 abstract fun getButtonBackgroundDrawable(isX: Boolean): Int
@@ -132,7 +134,7 @@ abstract fun setResultText(text: String)
 ```
 *Child classes (Basic/Retro) implement these to define their visual styles.*
 
-
+---
 ### **2. Theme Implementations**
 #### **A. Basic Theme**
 **File:** `BasicActivity.kt`  
@@ -383,7 +385,8 @@ Glide.with(this)
 **Future Roadmap:**  
 1. **Dynamic Difficulty**: Let players choose AI strength.  
 2. **Theme Editor**: Custom colors/animations via JSON.  
-3. **Unit Tests**: Coverage for AI logic (currently 0%).  
+3. **Unit Tests**: Coverage for AI logic (currently 0%).
+4. **Bigger Grids**: increase the grid size instead of 3x3 to increase game difficulty  
 
 ---
 
@@ -391,29 +394,13 @@ Glide.with(this)
 | Metric | Value |  
 |--------|-------|  
 | Code Duplication | Reduced from 45% → 5% |  
-| APK Size | Basic: 3MB, Retro: 4.5MB |  
+| APK Size | from 28MB -> 17MB|  
 | Avg. Frame Rate | Basic: 60fps, Retro: 50fps (with effects) |  
-
----
-
-This revision provides:  
-- **Clearer comparisons** between old/new designs.  
-- **Data-driven insights** (win rates, performance metrics).  
-- **Actionable future steps** with prioritization.  
-- **Visual aids** (tables, diagrams) for quick scanning.  
-
-Would you like to emphasize any specific area further?
 
 ---
 ## Output Format
 
-The game provides visual feedback through:
-
-1. **Game Board Updates**:
-   - X/O marks appear on button clicks
-   - Button states update (enabled/disabled)
-
-2. **Game Status Messages**:
+1. **Game Status Messages**:
 ```kotlin
 tv_result.text = when {
     isWin("x") -> "You Won!"
@@ -422,19 +409,11 @@ tv_result.text = when {
     else -> ""
 }
 ```
+**2. Main Theme:** <br >
+<img src="https://github.com/user-attachments/assets/e1d68f7f-5aec-453b-97dc-dcefff27018b" width="200">
 
-3. **Visual Feedback**:
-   - Winning line highlight (Retro version)
-   - Button animations
-   - Background effects
+**3. Basic Theme:** <br >
+<img src="https://github.com/user-attachments/assets/267fdc37-2f3f-4380-be30-de930c1cea98" width="200">
 
-4. **Audio Feedback**:
-   - Click sounds
-   - Win/lose sound effects
-   - Background music
-
-Example game flow:
-1. Player taps a square (X appears with sound)
-2. AI makes move after brief delay (O appears)
-3. Game continues until win/draw
-4. Reset button appears to restart game
+**4. Retro Theme:** <br >
+<img src="https://github.com/user-attachments/assets/3dc44c2b-d01b-4f30-898a-72923ffbdff9" width="200">
