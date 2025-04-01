@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main game screen layout for Basic Tic Tac Toe
+    Uses ConstraintLayout as root container for flexible positioning
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +11,10 @@
     android:layout_height="match_parent"
     tools:context=".Basic">
 
-    <!-- Background Image -->
+    <!--
+        Background Image - Full screen image behind all other elements
+        Disabled for accessibility since it's purely decorative
+    -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -31,6 +38,10 @@
 <!--        android:layout_marginTop="65dp"-->
 <!--        android:layout_marginStart="10dp"/>-->
 
+    <!--
+        Game Title Text - Centered at top of screen
+        Uses custom font and styling
+    -->
     <TextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
@@ -45,6 +56,10 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="160dp"/>
 
+    <!--
+        Game Result Display - Shows win/loss/draw messages
+        Positioned above the game grid
+    -->
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
@@ -60,6 +75,10 @@
         android:layout_marginBottom="10dp"
         />
 
+    <!--
+        Game Board Grid - 3x3 grid of buttons representing Tic Tac Toe board
+        Each button will display X or O when clicked
+    -->
     <GridLayout
         android:id="@+id/grid_layout"
         android:layout_width="wrap_content"
@@ -72,6 +91,9 @@
         android:rowCount="3"
         android:layout_marginTop="50dp">
 
+        <!--
+            Game Board Buttons - 9 buttons arranged in 3x3 grid
+        -->
         <Button
             android:id="@+id/box1"
             android:layout_width="100dp"
@@ -156,6 +178,11 @@
 
     </GridLayout>
 
+    <!--
+    Reset Button - Allows restarting the game
+    Positioned at bottom left with margin for finger access
+    Uses custom color from resources
+    -->
     <Button
         android:id="@+id/reset_button"
         android:layout_width="wrap_content"

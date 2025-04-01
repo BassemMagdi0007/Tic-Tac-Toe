@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+    Main menu layout for Tic Tac Toe game selection screen
+    Uses FrameLayout as root container to layer background and UI elements
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--
+        Animated background image - spans entire screen
+    -->
     <ImageView
         android:id="@+id/backgroundGif"
         android:layout_width="match_parent"
@@ -12,12 +20,18 @@
         android:adjustViewBounds="true"
         tools:ignore="ContentDescription"/>
 
+    <!--
+        Vertical container for menu buttons
+        - Holds both game mode selection buttons in a column
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
-
+        <!--
+            Basic Mode Button - First menu option
+        -->
         <Button
             android:id="@+id/button_basic"
             android:layout_width="wrap_content"
@@ -30,6 +44,9 @@
             android:layout_marginEnd="10dp"
             android:layout_marginStart="75dp"/>
 
+        <!--
+            Retro Mode Button - Second menu option
+        -->
         <Button
             android:id="@+id/button_retro"
             android:layout_width="wrap_content"
@@ -40,6 +57,6 @@
             android:text="Retro"
             android:layout_marginTop="16dp"
             android:layout_marginStart="75dp"/>
-    </LinearLayout>
 
+    </LinearLayout>
 </FrameLayout>

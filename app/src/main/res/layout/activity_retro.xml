@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Retro Tic Tac Toe game screen layout
+    Features animated background, rain effect, and neon-styled UI elements
+    Uses ConstraintLayout for flexible positioning of all game elements
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +13,9 @@
     tools:context=".Retro">
 
 
-    <!-- Night GIF background -->
+    <!--
+        Primary background GIF - Night cityscape animation
+    -->
     <ImageView
         android:id="@+id/backgroundGif"
         android:layout_width="match_parent"
@@ -30,7 +37,9 @@
 <!--        android:layout_marginTop="65dp"-->
 <!--        android:layout_marginStart="10dp"/>-->
 
-    <!-- Toggle Rain Button -->
+    <!--
+        Rain Toggle Button - Top-right control
+    -->
     <Button
         android:id="@+id/toggleRainButton"
         android:layout_width="wrap_content"
@@ -38,7 +47,6 @@
         android:alpha="0.5"
         android:text="Toggle Rain"
         android:textColor="@color/button_text"
-
         android:backgroundTint="@color/button_color"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +69,9 @@
 <!--        android:padding="5dp"-->
 <!--        android:textSize="12sp"/>-->
 
-    <!-- App Name TextView -->
+    <!--
+        Game Title - Centered at top
+    -->
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
@@ -76,7 +86,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="160dp" />
 
-    <!-- Result TextView -->
+    <!--
+        Game Result Display - Shows win/loss/draw status
+    -->
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
@@ -91,7 +103,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp" />
 
-    <!-- Tic Tac Toe Grid Layout -->
+    <!--
+        Game Board Grid - 3x3 grid container
+    -->
     <GridLayout
         android:id="@+id/grid_layout"
         android:layout_width="wrap_content"
@@ -104,7 +118,9 @@
         android:rowCount="3"
         android:layout_marginTop="50dp">
 
-        <!-- Grid Buttons -->
+        <!--
+            Game Board Buttons - 9 buttons arranged in 3x3 grid
+        -->
         <Button
             android:id="@+id/box1"
             android:layout_width="100dp"
@@ -189,7 +205,9 @@
 
     </GridLayout>
 
-    <!-- Reset Button -->
+    <!--
+        Reset Button - Bottom-left control
+    -->
     <Button
         android:id="@+id/reset_button"
         android:layout_width="wrap_content"
@@ -202,7 +220,9 @@
         android:layout_marginBottom="90dp"
         android:layout_marginStart="20dp"/>
 
-    <!-- Rain GIF ImageView -->
+    <!--
+        Rain Effect Overlay - Full screen animated rain
+    -->
     <ImageView
         android:id="@+id/rainGif"
         android:layout_width="match_parent"
