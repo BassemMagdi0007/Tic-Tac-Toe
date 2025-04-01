@@ -64,6 +64,7 @@ TicTacToe/
 4. **Install Application (Optional):**
    - Open folder `Apk Game/`
    - Double click and install `TicTacToe.apk` <br >
+
 **NOTE:** Since this is an indie game (App) that is not published on the App Store, a security message will pop up stating app is not trusted or not secured, well... it is secured :] 
 
 ### Used Libraries
