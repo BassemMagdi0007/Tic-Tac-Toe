@@ -92,7 +92,7 @@
    - Open folder `Apk Game/`
    - Double click and install `TicTacToe.apk` <br >
 
-**NOTE:** Since this is an indie game (App) that is not published on the App Store, a security message will pop up when installing stating app is not trusted or secured, well... it is secured :] 
+**NOTE:** Since this is an indie game (App) that is not published on an official App Store, you may see a security warning when installing, such as a Play Protect warning on Android, well... Don't worry—the app is safe and secure! :] 
 
 ### Used Libraries:
 
