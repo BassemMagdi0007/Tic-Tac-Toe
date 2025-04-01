@@ -1,4 +1,4 @@
-# Tic Tac Toe Game - Comprehensive Documentation
+# Tic Tac Toe Game
 
 ## Table of Contents  
 
