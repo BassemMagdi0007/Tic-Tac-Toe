@@ -20,23 +20,23 @@ The Tic Tac Toe game is an Android application developed in Kotlin that offers a
 TicTacToe/
 ├── app/
 │   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/example/tictactoe/
-│   │   │   │   ├── BaseTicTacToeActivity.kt  // Centralizing shared game logic
-│   │   │   │   ├── BasicActivity.kt          // Basic game class
-│   │   │   │   ├── RetroActivity.kt          // Retro Game class
-│   │   │   │   ├── MainActivity.kt           // Main page class
-│   │   │   │   ├── MediaPlayerSingleton.kt   // Manages shared media player
-│   │   │   │   └── TypeWriterAnimation       // Animates text like a typewriter
-│   │   │   └── res/
-│   │   │       ├── layout/
-│   │   │       │    ├── activity_basic.xml
-│   │   │       │    ├── activity_retro.xml
-│   │   │       │    └── activity_main.xml
-│   │   │       ├── drawable/
-│   │   │       ├── anim/
-│   │   │       └── raw/
-│   │   │
+│       ├── main/
+│           ├── java/com/example/tictactoe/
+│           │   ├── BaseTicTacToeActivity.kt  // Centralizing shared game logic
+│           │   ├── BasicActivity.kt          // Basic game class
+│           │   ├── RetroActivity.kt          // Retro Game class
+│           │   ├── MainActivity.kt           // Main page class
+│           │   ├── MediaPlayerSingleton.kt   // Manages shared media player
+│           │   └── TypeWriterAnimation       // Animates text like a typewriter
+│           └── res/
+│               ├── layout/
+│               │    ├── activity_basic.xml
+│               │    ├── activity_retro.xml
+│               │    └── activity_main.xml
+│               ├── drawable/
+│               ├── anim/
+│               └── raw/
+│       
 ├── Apk Game/
 │   └── TicTacToe.apk
 ├── build.gradle
