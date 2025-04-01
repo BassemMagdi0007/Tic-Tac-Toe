@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Retro">
+
+
+    <!-- Night GIF background -->
+    <ImageView
+        android:id="@+id/backgroundGif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        tools:ignore="ContentDescription"/>
+
+<!--    &lt;!&ndash; Back Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Back"-->
+<!--        android:textColor="@color/button_text"-->
+<!--        android:backgroundTint="@color/button_color"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="65dp"-->
+<!--        android:layout_marginStart="10dp"/>-->
+
+    <!-- Toggle Rain Button -->
+    <Button
+        android:id="@+id/toggleRainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:text="Toggle Rain"
+        android:textColor="@color/button_text"
+
+        android:backgroundTint="@color/button_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="10dp"/>
+
+<!--    &lt;!&ndash; Mute Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/muteButton"-->
+<!--        android:layout_width="48sp"-->
+<!--        android:layout_height="48sp"-->
+<!--        android:alpha="0.5"-->
+<!--        android:text="Mute"-->
+<!--        android:textColor="@color/button_text"-->
+<!--        android:backgroundTint="@color/button_color"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="120dp"-->
+<!--        android:layout_marginEnd="25dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:textSize="12sp"/>-->
+
+    <!-- App Name TextView -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="35sp"
+        android:textColor="@color/title_color"
+        android:textStyle="bold"
+        android:fontFamily="@font/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="160dp" />
+
+    <!-- Result TextView -->
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Match Draw"
+        android:textColor="@color/result_text"
+        android:textStyle="bold"
+        android:fontFamily="@font/text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/grid_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Tic Tac Toe Grid Layout -->
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginTop="50dp">
+
+        <!-- Grid Buttons -->
+        <Button
+            android:id="@+id/box1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+        <Button
+            android:id="@+id/box9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/box"
+            android:importantForAccessibility="no"
+            android:layout_margin="7dp"
+            android:textSize="0sp"
+            app:backgroundTint="@color/box_color"/>
+
+    </GridLayout>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textColor="@color/button_text"
+        android:backgroundTint="@color/button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="90dp"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Rain GIF ImageView -->
+    <ImageView
+        android:id="@+id/rainGif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

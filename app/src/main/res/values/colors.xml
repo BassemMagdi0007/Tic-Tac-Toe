@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color for the title text -->
+    <color name="title_color">#60c4bb</color>
+
+    <!-- Color for the boxes -->
+    <color name="box_color">#60c4bb</color>
+
+    <!-- Color for the status bar background -->
+    <color name="button_color">#60c4bb</color>
+
+    <!-- Color for the result text -->
+    <color name="button_text">#0a060a</color>
+
+    <!-- Color for the result text -->
+    <color name="result_text">#FFFFFFFF</color>
+
+</resources>
