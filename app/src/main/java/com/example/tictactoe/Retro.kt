@@ -156,7 +156,46 @@ class Retro : BaseTicTacToeActivity() {
                 box1.startAnimation(rotateAnimation)
                 onButtonClick(box1)  // Inherited game logic
             }
-            // [Similar listeners for box2 through box9...]
+            box2.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box2.startAnimation(rotateAnimation)
+                onButtonClick(box2)  // Inherited game logic
+            }
+            box3.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box3.startAnimation(rotateAnimation)
+                onButtonClick(box3)  // Inherited game logic
+            }
+            box4.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box4.startAnimation(rotateAnimation)
+                onButtonClick(box4)  // Inherited game logic
+            }
+            box5.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box5.startAnimation(rotateAnimation)
+                onButtonClick(box5)  // Inherited game logic
+            }
+            box6.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box6.startAnimation(rotateAnimation)
+                onButtonClick(box6)  // Inherited game logic
+            }
+            box7.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box7.startAnimation(rotateAnimation)
+                onButtonClick(box7)  // Inherited game logic
+            }
+            box8.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box8.startAnimation(rotateAnimation)
+                onButtonClick(box8)  // Inherited game logic
+            }
+            box9.setOnClickListener {
+                val rotateAnimation = AnimationUtils.loadAnimation(this@Retro, R.anim.pulse_glow)
+                box9.startAnimation(rotateAnimation)
+                onButtonClick(box9)  // Inherited game logic
+            }
 
             resetButton.setOnClickListener { resetGame() }  // Inherited reset functionality
             toggleRainButton.setOnClickListener { toggleRainGif() }

@@ -1,6 +1,7 @@
 package com.example.tictactoe
 
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
@@ -15,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity
 abstract class BaseTicTacToeActivity : AppCompatActivity() {
     // Tracks current player turn ("p1" for human player, "cpu" for computer)
     protected var player = "p1"
+    // MediaPlayer for click sound effect
+    private lateinit var clickMediaPlayer: MediaPlayer
 
     //----------------------------------------------------------------------------------------------
     // ABSTRACT METHODS (Must be implemented by child classes)
@@ -274,6 +277,13 @@ abstract class BaseTicTacToeActivity : AppCompatActivity() {
      * Resets game to initial state
      */
     protected fun resetGame() {
+        // Play click sound
+        clickMediaPlayer = MediaPlayer.create(this, R.raw.click)
+        clickMediaPlayer.start()
+        clickMediaPlayer.setVolume(0.5f, 0.5f)
+        clickMediaPlayer.setOnCompletionListener {
+            it.release()  // Release media player after completion
+        }
         player = "p1" // Reset to player's turn
         getGameButtons().forEach {
             it.setBackgroundResource(getBoxBackgroundDrawable()) // Reset box appearance
