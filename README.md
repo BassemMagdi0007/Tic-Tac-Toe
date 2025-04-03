@@ -1,4 +1,4 @@
-# Tic Tac Toe Game - Comprehensive Documentation
+# Tic Tac Toe Game
 
 ## Table of Contents  
 
@@ -92,7 +92,7 @@
    - Open folder `Apk Game/`
    - Double click and install `TicTacToe.apk` <br >
 
-**NOTE:** Since this is an indie game (App) that is not published on the App Store, a security message will pop up when installing stating app is not trusted or secured, well... it is secured :] 
+**NOTE:** Since this is an indie game (App) that is not published on an official App Store, you may see a security warning when installing, such as a Play Protect warning on Android, well... Don't worry—the app is safe and secure! :] 
 
 ### Used Libraries:
 
@@ -369,24 +369,24 @@ Glide.with(this)
 
 ### **4. Lessons Learned**  
 **What Worked Well:**  
-✅ **Inheritance Model**: Reduced redundancy by 70%.  
-✅ **Modular Media**: Singleton prevented audio conflicts.  
-✅ **UX Polish**: Animations increased user retention in testing.  
+  - **Inheritance Model**: Reduced redundancy by 70%.  
+  - **Modular Media**: Singleton prevented audio conflicts.  
+  - **UX Polish**: Animations increased user retention in testing.  
 
 **What Could Improve:**  
-⚠️ **Technical Debt**:  
-- Hardcoded strings → Should use `strings.xml`.  
-- Magic numbers (e.g., 500ms delays) → Constants class.  
+  - **Technical Debt**:  
+    - Hardcoded strings → Should use `strings.xml`.  
+    - Magic numbers (e.g., 500ms delays) → Constants class.  
 
-⚠️ **Scalability**:  
-- Adding new themes requires subclassing.  
-- AI rules would benefit from configuration files.  
+  - **Scalability**:  
+    - Adding new themes requires subclassing.  
+    - AI rules would benefit from configuration files.  
 
 **Future Roadmap:**  
-1. **Dynamic Difficulty**: Let players choose AI strength.  
-2. **Theme Editor**: Custom colors/animations via JSON.  
-3. **Unit Tests**: Coverage for AI logic (currently 0%).
-4. **Bigger Grids**: increase the grid size instead of 3x3 to increase game difficulty  
+  1. **Dynamic Difficulty**: Let players choose AI strength.  
+  2. **Theme Editor**: Custom colors/animations via JSON.  
+  3. **Unit Tests**: Coverage for AI logic (currently 0%).
+  4. **Bigger Grids**: increase the grid size instead of 3x3 to increase game difficulty  
 
 ---
 
